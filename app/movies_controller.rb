@@ -40,8 +40,8 @@ def can_get_the_last_item_in_the_database
   Movie.last
 end
 def can_get_size_of_the_database
-  Movie.size
-  # Movie.count
+  # Movie.size
+  Movie.count
 end
 def can_find_the_first_item_from_the_database_using_id
   Movie.find_by(id:1)
@@ -85,7 +85,7 @@ end
 def can_destroy_a_single_item
  Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
  movie = Movie.find_by(title: "That One Where the Guy Kicks Another Guy Once")
- movie.delete
+ movie.destroy
 end
 def can_destroy_all_items_at_once
   10.times do |i|
